@@ -24,7 +24,7 @@ dotenv.config();
 
 //cors configuration
 const corsOptions = {
-    origin: "http://localhost:3000", // Replace with your frontend's URL
+    origin: "https://buddy-chat-frontend.onrender.com", // Replace with your frontend's URL
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
     credentials: true, // To allow cookies
   };
