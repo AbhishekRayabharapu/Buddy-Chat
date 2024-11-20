@@ -94,7 +94,7 @@
 
   },
 
-  "proxy": "http://localhost:5000"
+  "proxy": "https://buddy-chat-backend.onrender.com"
 
 }
 
