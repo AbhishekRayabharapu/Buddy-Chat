@@ -7,13 +7,17 @@ const useLogin = () => {
     const [loading, setLoading] = useState(false);
     const {setAuthUser}=useAuthContext()
 
+    const BASE_URL =
+    process.env.NODE_ENV === "production"
+      ? process.env.REACT_APP_BACKEND_URL // Backend URL from environment variables
+      : "http://localhost:5000"; // Default for local development
 
     const login = async (username, password) =>{
         const success = handleInputErrors(username,password);
         if(!success) return ;
         setLoading(true);
         try {
-            const res = await fetch("/api/auth/login",{
+            const res = await fetch(`${BASE_URL}/api/auth/login`,{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
